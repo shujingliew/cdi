@@ -1,0 +1,22 @@
+import { Meta, Preview, Props, Description, Story } from "@storybook/addon-docs/blocks";
+import { object } from "@storybook/addon-knobs";
+import { LetterCreditTemplate } from "./LetterCredit";
+import { lettercredit } from "./sample";
+
+<Meta title="MDX|LetterCreditTemplate" component={LetterCreditTemplate} />
+
+# CustomTemplate component
+
+<Description of={LetterCreditTemplate} />
+
+# Props
+
+<Props of={LetterCreditTemplate} />
+
+# Usage
+
+<Preview>
+  <Story name="sample">
+    <LetterCreditTemplate document={object("document", lettercredit)} />
+  </Story>
+</Preview>
