@@ -1,7 +1,7 @@
 import { Meta, Preview, Props, Description, Story } from "@storybook/addon-docs/blocks";
 import { object } from "@storybook/addon-knobs";
 import { LetterCreditTemplate } from "./LetterCredit";
-import { lettercredit } from "./sample";
+import { letterCredit } from "./sample";
 
 <Meta title="MDX|LetterCreditTemplate" component={LetterCreditTemplate} />
 
@@ -17,6 +17,6 @@ import { lettercredit } from "./sample";
 
 <Preview>
   <Story name="sample">
-    <LetterCreditTemplate document={object("document", lettercredit)} />
+    <LetterCreditTemplate document={object("document", letterCredit)} />
   </Story>
 </Preview>

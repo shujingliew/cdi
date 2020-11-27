@@ -5,7 +5,7 @@ fixture("Generic Templates").page`http://localhost:3010`;
 
 const CustomTemplate = Selector("[data-testid='covering-letter-template']");
 
-test("Generic template is rendered correctly", async test => {
+test.skip("Generic template is rendered correctly", async test => {
   // test the title is displayed
   await test.click(Selector("[data-testid='COVERING_LETTER']"));
   await test.switchToIframe("#iframe");

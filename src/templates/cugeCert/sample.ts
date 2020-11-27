@@ -1,15 +1,17 @@
-import { LetterCredit } from "./types";
+import { CugeCertI } from "./types";
 
-export const letterCredit: LetterCredit = {
-  name: "Letter of Credit",
-  logo:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQV6NicJvNSgzuLopZXtJymIRQavwgZwPUc5_X-7K84YW2nuj1TWDgGG2zTXu8cLHDmnMAoZeCmgnfswQ4Q8BJtJvoyU9Ud1jEfdtP4jDc&usqp=CAU&ec=45722098",
-  creditNum: "123456",
-  issueDate: "11-Nov-2020",
-  partialShipments: "Partial Shipments is required",
-  transhipment: "Transhipments via Singapore",
+export const cugeCert: CugeCertI = {
+  name: "CUGE Cert",
+  logo: "https://www.nparks.gov.sg/-/media/cuge/general/cuge-logo.png",
+  signatureD: "/static/images/signature-simchenghai.jpg",
+  title: "testing",
+  issueDate: "03-July-2020",
+  text1: "text1",
+  text2: "text2",
+  text3: "text3",
+  field1: "Annie Young Kheng Mui",
   $template: {
-    name: "LETTER_CREDIT",
+    name: "CUGE_CERT",
     type: "EMBEDDED_RENDERER",
     url: "http://localhost:3000"
   },
