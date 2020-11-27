@@ -1,24 +1,15 @@
-import { CugeCert } from "./types";
+import { CugeCertI } from "./types";
 
-export const cugecert: CugeCert = {
+export const cugeCert: CugeCertI = {
   name: "CUGE Cert",
   logo: "https://www.nparks.gov.sg/-/media/cuge/general/cuge-logo.png",
-  signatureD: "./simchenghai.JPG",
+  signatureD: "/static/images/signature-simchenghai.jpg",
   title: "testing",
-  remarks: `.`,
-  //creditNum: "123456",
-  certName: "Annie Young Kheng Mui",
   issueDate: "03-July-2020",
   text1: "text1",
   text2: "text2",
   text3: "text3",
-  text4: "text4",
   field1: "Annie Young Kheng Mui",
-  field2: "field2",
-  field3: "field3",
-  field4: "field4",
-  //partialShipments: "Partial Shipments is required",
-  //transhipment: "Transhipments via Singapore",
   $template: {
     name: "CUGE_CERT",
     type: "EMBEDDED_RENDERER",

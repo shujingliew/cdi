@@ -9,7 +9,7 @@ export interface LetterCredit extends Document {
   backgroundColor?: string;
   remarksColor?: string;
   creditNum?: string;
-  issueDate?: string; 
+  issueDate?: string;
   partialShipments?: string;
   transhipment?: string;
   links?: {

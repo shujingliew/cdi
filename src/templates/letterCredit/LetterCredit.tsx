@@ -21,14 +21,25 @@ const Container = styled.div`
 `;
 
 export const LetterCreditTemplate: FunctionComponent<TemplateProps<LetterCredit>> = ({ document }) => {
-  const { logo, title, remarks, backgroundColor, titleColor, remarksColor, creditNum, issueDate, partialShipments, transhipment } = document;
+  const {
+    logo,
+    title,
+    remarks,
+    backgroundColor,
+    titleColor,
+    remarksColor,
+    creditNum,
+    issueDate,
+    partialShipments,
+    transhipment
+  } = document;
   const qrCodeUrl = document?.links?.self.href;
 
   return (
     <div style={{ backgroundColor }} data-testid="letter-credit-template">
       <Container className="p-4 mx-auto container">
         <PrintWatermark />
-        { logo && <img className="logo my-4" src={logo} />} 
+        {logo && <img className="logo my-4" src={logo} />}
         {title && (
           <h1 className="font-bold" style={{ color: titleColor }}>
             {title}
@@ -129,10 +140,8 @@ export const LetterCreditTemplate: FunctionComponent<TemplateProps<LetterCredit>
             </div>
           </div>
         )}
-          {qrCodeUrl && <DocumentQrCode url={qrCodeUrl} />}
+        {qrCodeUrl && <DocumentQrCode url={qrCodeUrl} />}
       </Container>
     </div>
   );
 };
-
-

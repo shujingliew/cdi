@@ -1,7 +1,7 @@
 import { Meta, Preview, Props, Description, Story } from "@storybook/addon-docs/blocks";
 import { object } from "@storybook/addon-knobs";
 import { CugeCertTemplate } from "./CugeCert";
-import { cugecert } from "./sample";
+import { cugeCert } from "./sample";
 
 <Meta title="MDX|CugeCertTemplate" component={CugeCertTemplate} />
 
@@ -17,6 +17,6 @@ import { cugecert } from "./sample";
 
 <Preview>
   <Story name="sample">
-    <CugeCertTemplate document={object("document", cugecert)} />
+    <CugeCertTemplate document={object("document", cugeCert)} />
   </Story>
 </Preview>
