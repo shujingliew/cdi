@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import "./bootstrap.min.css";
 import "./style.css";
 import { TemplateProps } from "@govtechsg/decentralized-renderer-react-components";
-import { BLCertificate } from "./billOfLadingSample";
+import { BLCertificateEM } from "./billOfLadingEMSample";
 import { DocumentQrCode } from "./DocumentQrCode";
 
 const borderStyle = {
@@ -96,7 +96,7 @@ const Section3 = (): JSX.Element => (
   </div>
 );
 
-const Section2 = (document: BLCertificate): JSX.Element => {
+const Section2 = (document: BLCertificateEM): JSX.Element => {
   const packages = document.packages || [];
   const renderedKindOfPackage = packages.map((pkg, index) => <div key={index}>{pkg.description}</div>);
   const renderedWeight = packages.map((pkg, index) => <div key={index}>{pkg.weight}</div>);
@@ -126,7 +126,7 @@ const Section2 = (document: BLCertificate): JSX.Element => {
   );
 };
 
-const Section1 = (document: BLCertificate): JSX.Element => {
+const Section1 = (document: BLCertificateEM): JSX.Element => {
   const { shipper = {}, blNumber, consignee = {}, notifyParty = {} } = document;
   return (
     <div className="d-flex flex-column" style={borderStyle}>
@@ -135,7 +135,7 @@ const Section1 = (document: BLCertificate): JSX.Element => {
         <div className="p-2 col-6" style={{ ...borderStyle }}>
           <div className="d-flex align-items-center justify-content-center h-100 text-center">
             {/* <img style={{ width: "150px" }} src="/static/images/signature-simchenghai.jpg" /> */}
-            <img style={{ width: "150px" }} src="/static/images/logo-qrcode.png" />
+            <img style={{ width: "150px" }} src="/static/images/ExxonMobil-Logo.png" />
           </div>
         </div>
         <div className="d-flex col-6">
@@ -238,7 +238,7 @@ const Section1 = (document: BLCertificate): JSX.Element => {
   );
 };
 
-export const BillOfLadingTemplate: FunctionComponent<TemplateProps<BLCertificate>> = ({ document }) => {
+export const BillOfLadingEMTemplate: FunctionComponent<TemplateProps<BLCertificateEM>> = ({ document }) => {
   const qrCodeUrl = document?.links?.self.href;
   return (
     // Section 1
