@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from "react";
-import "bootstrap/dist/css/bootstrap.css";
+import "./bootstrap.min.css";
 import "./style.css";
 import { TemplateProps } from "@govtechsg/decentralized-renderer-react-components";
-import { BLCertificate } from "../samples";
+import { BLCertificate } from "./billOfLadingSample";
 import { DocumentQrCode } from "./DocumentQrCode";
 
 const borderStyle = {
@@ -134,7 +134,7 @@ const Section1 = (document: BLCertificate): JSX.Element => {
       <div className="d-flex">
         <div className="p-2 col-6" style={{ ...borderStyle }}>
           <div className="d-flex align-items-center justify-content-center h-100 text-center">
-            <img style={{ width: "150px" }} src="/static/tradetrust_logo.svg" />
+            <img style={{ width: "150px" }} src="/static/images/signature-simchenghai.jpg" />
           </div>
         </div>
         <div className="d-flex col-6">
