@@ -54,7 +54,7 @@ export const CugeCertTemplate: FunctionComponent<TemplateProps<CugeCertI>> = ({ 
           </div>
         </div>
         <div className="grid grid-cols-1 gap-2">
-          <div /> 
+          <div />
           <div className="place-self-center">
             <h1 className="font" style={{ color: titleColor }}>
               <p className="underline">{field1}</p>
