@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { blCertificate } from "../src/templates/billOfLading/billOfLadingSample";
+import { blCertificateEM } from "../src/templates/billOfLadingEM/billOfLadingEMSample";
 import { coveringLetter } from "../src/templates/coveringLetter/sample";
+import { cugeCert } from "../src/templates/cugeCert/sample";
 import { invoice } from "../src/templates/invoice/sample";
 import { letterCredit } from "../src/templates/letterCredit/sample";
-import { cugeCert } from "../src/templates/cugeCert/sample";
-import { blCertificate } from "../src/templates/billOfLading/billOfLadingSample";
 import { App } from "./app";
 
 ReactDOM.render(
@@ -14,7 +15,8 @@ ReactDOM.render(
       { name: "Generic Templates - Invoice", document: invoice },
       { name: "Generic Templates - Letter of Credit", document: letterCredit },
       { name: "Generic Templates - Certificate in Therapeutic Horticulture", document: cugeCert },
-      { name: "Generic Templates - Bill of Lading", document: blCertificate }
+      { name: "Generic Templates - Bill of Lading", document: blCertificate },
+      { name: "Generic Templates - Bill of Lading EM", document: blCertificateEM }
     ]}
   />,
   document.getElementById("root")
