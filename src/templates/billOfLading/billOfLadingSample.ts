@@ -28,6 +28,11 @@ export interface BLCertificate extends Document {
 }
 
 export const blCertificate: BLCertificate = {
+  $template: {
+    name: "BILL_OF_LADING",
+    type: "EMBEDDED_RENDERER",
+    url: "http://localhost:3000"
+  },
   blNumber: "SGCNM21566325",
   packages: [
     {
