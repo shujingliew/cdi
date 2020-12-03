@@ -9,6 +9,6 @@ describe("letter of Credit2", () => {
   it("should render the letter of credit correctly", () => {
     render(<LetterCredit2Template document={letterCredit2} handleObfuscation={() => {}} />);
 
-    expect(screen.getAllByText("123456")).toHaveLength(1);
+    expect(screen.getAllByText("Seller A")).toHaveLength(1);
   });
 });
