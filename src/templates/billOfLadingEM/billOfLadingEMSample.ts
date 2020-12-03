@@ -29,7 +29,7 @@ export interface BLCertificateEM extends Document {
 
 export const blCertificateEM: BLCertificateEM = {
   $template: {
-    name: "BILL_OF_LADINGEM",
+    name: "BILL_OF_LADING_EM",
     type: "EMBEDDED_RENDERER",
     url: "http://localhost:3000"
   },
