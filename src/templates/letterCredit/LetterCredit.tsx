@@ -22,15 +22,19 @@ const Container = styled.div`
 
 export const LetterCreditTemplate: FunctionComponent<TemplateProps<LetterCredit>> = ({ document }) => {
   const {
-    logo,
     title,
-    remarks,
     backgroundColor,
     titleColor,
-    remarksColor,
     creditNum,
     issueDate,
     partialShipments,
+    sellerName,
+    buyerName,
+    goodsDesc,
+    quantity,
+    price,
+    portOfLoading,
+    portOfDestination,
     transhipment
   } = document;
   const qrCodeUrl = document?.links?.self.href;
@@ -39,107 +43,74 @@ export const LetterCreditTemplate: FunctionComponent<TemplateProps<LetterCredit>
     <div style={{ backgroundColor }} data-testid="letter-credit-template">
       <Container className="p-4 mx-auto container">
         <PrintWatermark />
-        {logo && <img className="logo my-4" src={logo} />}
+
+        <div className="grid grid-cols-1 gap-1">
+          <div className="place-self-center">
+            <img style={{ width: "150px" }} src="/static/images/quotation_icon.png" />
+            <br />
+            <br />
+            <br />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-1">
+          <div className="place-self-center text-3xl">
+            Letter of Credit Details
+            <br />
+            <br />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-4 gap-3">
+          <div className="font-bold">Documentary Credit Number:</div>
+          <div>{creditNum}</div>
+          <div className="font-bold">Issue Date:</div>
+          <div>{issueDate}</div>
+          <div className="font-bold">Partial Shipments:</div>
+          <div>{partialShipments}</div>
+          <div className="font-bold" />
+          <div />
+          <div className="font-bold">Transhipment:</div>
+          <div>
+            {transhipment}
+            <br />
+            <br />
+          </div>
+        </div>
+
         {title && (
           <h1 className="font-bold" style={{ color: titleColor }}>
             {title}
           </h1>
         )}
-        {remarks && (
-          <div className="my-4">
-            <div
-              className="font-bold"
-              style={{
-                color: remarksColor
-              }}
-            >
-              Remarks:
-            </div>
-            <div
-              style={{
-                color: remarksColor
-              }}
-            >
-              {remarks}
-            </div>
+
+        <div className="grid grid-cols-1 gap-1">
+          <div className="place-self-center text-3xl">
+            Sales Contract Details
+            <br />
+            <br />
           </div>
-        )}
-        {creditNum && (
-          <div className="my-4">
-            <div
-              className="font-bold"
-              style={{
-                color: remarksColor
-              }}
-            >
-              Documentary Credit Number:
-            </div>
-            <div
-              style={{
-                color: remarksColor
-              }}
-            >
-              {creditNum}
-            </div>
-          </div>
-        )}
-        {issueDate && (
-          <div className="my-4">
-            <div
-              className="font-bold"
-              style={{
-                color: remarksColor
-              }}
-            >
-              Issue Date:
-            </div>
-            <div
-              style={{
-                color: remarksColor
-              }}
-            >
-              {issueDate}
-            </div>
-          </div>
-        )}
-        {partialShipments && (
-          <div className="my-4">
-            <div
-              className="font-bold"
-              style={{
-                color: remarksColor
-              }}
-            >
-              Partial Shipments:
-            </div>
-            <div
-              style={{
-                color: remarksColor
-              }}
-            >
-              {partialShipments}
-            </div>
-          </div>
-        )}
-        {transhipment && (
-          <div className="my-4">
-            <div
-              className="font-bold"
-              style={{
-                color: remarksColor
-              }}
-            >
-              Transhipment:
-            </div>
-            <div
-              style={{
-                color: remarksColor
-              }}
-            >
-              {transhipment}
-            </div>
-          </div>
-        )}
+        </div>
+
+        <div className="grid grid-cols-4 gap-3">
+          <div className="font-bold">Seller Name:</div>
+          <div>{sellerName}</div>
+          <div className="font-bold">Buyer Name:</div>
+          <div>{buyerName}</div>
+          <div className="font-bold">Goods Description:</div>
+          <div>{goodsDesc}</div>
+          <div className="font-bold">Quantity:</div>
+          <div>{quantity}</div>
+          <div className="font-bold">Price:</div>
+          <div>{price}</div>
+          <div />
+          <div />
+          <div className="font-bold">Port of Loading:</div>
+          <div>{portOfLoading}</div>
+          <div className="font-bold">Port of Destination:</div>
+          <div>{portOfDestination}</div>
+        </div>
+
         {qrCodeUrl && <DocumentQrCode url={qrCodeUrl} />}
       </Container>
     </div>

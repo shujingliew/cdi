@@ -11,6 +11,13 @@ export interface LetterCredit extends Document {
   creditNum?: string;
   issueDate?: string;
   partialShipments?: string;
+  sellerName?: string;
+  buyerName?: string;
+  goodsDesc?: string;
+  quantity?: string;
+  price?: string;
+  portOfLoading?: string;
+  portOfDestination?: string;
   transhipment?: string;
   links?: {
     self: {

@@ -7,6 +7,13 @@ export const letterCredit: LetterCredit = {
   creditNum: "123456",
   issueDate: "11-Nov-2020",
   partialShipments: "Partial Shipments is required",
+  sellerName: "Seller A",
+  buyerName: "Buyer B",
+  goodsDesc: "A carton of coke",
+  quantity: "1",
+  price: "$12",
+  portOfLoading: "Malaysia",
+  portOfDestination: "India",
   transhipment: "Transhipments via Singapore",
   $template: {
     name: "LETTER_CREDIT",

@@ -1,0 +1,22 @@
+import { Meta, Preview, Props, Description, Story } from "@storybook/addon-docs/blocks";
+import { object } from "@storybook/addon-knobs";
+import { BillOfLadingShellTemplate } from "./billOfLadingShellTemplate";
+import { blCertificateShell } from "./billOfLadingShellSample";
+
+<Meta title="MDX|BillOfLadingShellTemplate" component={BillOfLadingShellTemplate} />
+
+# BillOfLadingShellTemplate component
+
+<Description of={BillOfLadingShellTemplate} />
+
+# Props
+
+<Props of={BillOfLadingShellTemplate} />
+
+# Usage
+
+<Preview>
+  <Story name="basic sample">
+    <BillOfLadingShellTemplate document={object("BL Document", blCertificateShell)} />
+  </Story>
+</Preview>
