@@ -7,6 +7,7 @@ import { coveringLetter } from "../src/templates/coveringLetter/sample";
 import { cugeCert } from "../src/templates/cugeCert/sample";
 import { invoice } from "../src/templates/invoice/sample";
 import { letterCredit } from "../src/templates/letterCredit/sample";
+import { letterCredit2 } from "../src/templates/letterCredit2/sample";
 import { App } from "./app";
 
 ReactDOM.render(
@@ -15,6 +16,7 @@ ReactDOM.render(
       { name: "Generic Templates - Covering Letter", document: coveringLetter },
       { name: "Generic Templates - Invoice", document: invoice },
       { name: "Generic Templates - Letter of Credit", document: letterCredit },
+      { name: "Generic Templates - Letter of Credit 2", document: letterCredit2 },
       { name: "Generic Templates - Certificate in Therapeutic Horticulture", document: cugeCert },
       { name: "Generic Templates - Bill of Lading", document: blCertificate },
       { name: "Generic Templates - Bill of Lading EM", document: blCertificateEM },
