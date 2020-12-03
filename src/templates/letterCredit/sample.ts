@@ -2,7 +2,6 @@ import { LetterCredit } from "./types";
 
 export const letterCredit: LetterCredit = {
   name: "Letter of Credit",
-  logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQV6NicJvNSgzuLopZXtJymIRQavwgZwPUc5_X-7K84YW2nuj1TWDgGG2zTXu8cLHDmnMAoZeCmgnfswQ4Q8BJtJvoyU9Ud1jEfdtP4jDc&usqp=CAU&ec=45722098",
   creditNum: "123456",
   issueDate: "11-Nov-2020",
   partialShipments: "Partial Shipments is required",

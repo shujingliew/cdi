@@ -23,7 +23,6 @@ const Container = styled.div`
 export const LetterCreditTemplate: FunctionComponent<TemplateProps<LetterCredit>> = ({ document }) => {
   const {
     backgroundColor,
-    titleColor,
     creditNum,
     issueDate,
     partialShipments,
@@ -51,8 +50,6 @@ export const LetterCreditTemplate: FunctionComponent<TemplateProps<LetterCredit>
             <br />
           </div>
         </div>
-
-
         <div className="grid grid-cols-1 gap-1">
           <div className="place-self-center text-3xl">
             Letter of Credit Details

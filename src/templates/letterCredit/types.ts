@@ -4,7 +4,6 @@ export interface LetterCredit extends Document {
   name: string;
   logo?: string;
   remarks?: string;
-  titleColor?: string;
   backgroundColor?: string;
   remarksColor?: string;
   creditNum?: string;
