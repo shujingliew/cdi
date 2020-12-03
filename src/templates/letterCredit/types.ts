@@ -3,7 +3,8 @@ import { Document } from "@govtechsg/decentralized-renderer-react-components";
 export interface LetterCredit extends Document {
   name: string;
   logo?: string;
-  title?: string;
+  title?: object;
+  title2?: object;
   remarks?: string;
   titleColor?: string;
   backgroundColor?: string;
