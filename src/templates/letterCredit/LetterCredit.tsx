@@ -22,8 +22,6 @@ const Container = styled.div`
 
 export const LetterCreditTemplate: FunctionComponent<TemplateProps<LetterCredit>> = ({ document }) => {
   const {
-    title,
-    title2,
     backgroundColor,
     titleColor,
     creditNum,
@@ -54,11 +52,6 @@ export const LetterCreditTemplate: FunctionComponent<TemplateProps<LetterCredit>
           </div>
         </div>
 
-        {title && (
-          <h1 className="font-bold" style={{ color: titleColor }}>
-            {title}
-          </h1>
-        )}
 
         <div className="grid grid-cols-1 gap-1">
           <div className="place-self-center text-3xl">
@@ -84,12 +77,6 @@ export const LetterCreditTemplate: FunctionComponent<TemplateProps<LetterCredit>
             <br />
           </div>
         </div>
-
-        {title2 && (
-          <h1 className="font-bold" style={{ color: titleColor }}>
-            {title2}
-          </h1>
-        )}
 
         <div className="grid grid-cols-1 gap-1">
           <div className="place-self-center text-3xl">
