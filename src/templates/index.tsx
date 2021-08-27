@@ -7,6 +7,7 @@ import { cugeCertTemplate } from "./cugeCert";
 import { invoiceTemplate } from "./invoice";
 import { letterCreditTemplate } from "./letterCredit";
 import { letterCredit2Template } from "./letterCredit2";
+import { bankGuaranteeTemplate } from "./bankGuarantee";
 
 export const registry: TemplateRegistry<any> = {
   COVERING_LETTER: templates,
@@ -16,5 +17,6 @@ export const registry: TemplateRegistry<any> = {
   BILL_OF_LADING: blTemplates,
   BILL_OF_LADING_EM: blTemplatesEM,
   BILL_OF_LADING_SHELL: blTemplatesShell,
-  INVOICE: invoiceTemplate
+  INVOICE: invoiceTemplate,
+  BANK_GUARANTEE: bankGuaranteeTemplate
 };
