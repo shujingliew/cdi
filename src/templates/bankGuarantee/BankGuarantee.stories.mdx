@@ -1,0 +1,22 @@
+import { Meta, Preview, Props, Description, Story } from "@storybook/addon-docs/blocks";
+import { object } from "@storybook/addon-knobs";
+import { BankGuaranteeTemplate } from "./BankGuarantee";
+import { bankGuarantee } from "./sample";
+
+<Meta title="MDX|BankGuaranteeTemplate" component={BankGuaranteeTemplate} />
+
+# CustomTemplate component
+
+<Description of={BankGuaranteeTemplate} />
+
+# Props
+
+<Props of={BankGuaranteeTemplate} />
+
+# Usage
+
+<Preview>
+  <Story name="sample">
+    <BankGuaranteeTemplate document={object("document", bankGuarantee)} />
+  </Story>
+</Preview>
