@@ -34,8 +34,7 @@ export const BankGuaranteeTemplate: FunctionComponent<TemplateProps<BankGuarante
     beneficiaryAddress,
     guarantorName,
     guarantorAddress,
-    guarantorRef,
-    supportingDoc
+    guarantorRef
   } = document;
   const qrCodeUrl = document?.links?.self.href;
 
@@ -75,8 +74,8 @@ export const BankGuaranteeTemplate: FunctionComponent<TemplateProps<BankGuarante
           <div>{vendorAddress}</div>
           <div className="font-bold">Vendor Ref:</div>
           <div>{vendorRef}</div>
-          <div/>
-          <div/>
+          <div />
+          <div />
           <div className="font-bold">Beneficiary Name:</div>
           <div>{beneficiaryName}</div>
           <div className="font-bold">Beneficiary Address:</div>
@@ -87,8 +86,8 @@ export const BankGuaranteeTemplate: FunctionComponent<TemplateProps<BankGuarante
           <div>{guarantorAddress}</div>
           <div className="font-bold">Guarantor Ref:</div>
           <div>{guarantorRef}</div>
-          <div/>
-          <div/>
+          <div />
+          <div />
         </div>
 
         {qrCodeUrl && <DocumentQrCode url={qrCodeUrl} />}
