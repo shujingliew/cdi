@@ -39,9 +39,17 @@ export const BankGuaranteeTemplate: FunctionComponent<TemplateProps<BankGuarante
   } = document;
   const qrCodeUrl = document?.links?.self.href;
 
+  const borderStyle = {
+    borderStyle: "solid",
+    borderWidth: 1.5,
+    borderColor: "black"
+  };
+
   return (
-    <div style={{ backgroundColor }} data-testid="bank-guarantee-template">
-      <Container className="p-4 mx-auto container">
+
+    <div style={{ backgroundColor, borderStyle }} data-testid="bank-guarantee-template">
+    <div style={borderStyle}>
+    <Container className="p-4 mx-auto container">
         <PrintWatermark />
 
         <div className="grid grid-cols-1 gap-1">
@@ -93,6 +101,7 @@ export const BankGuaranteeTemplate: FunctionComponent<TemplateProps<BankGuarante
 
         {qrCodeUrl && <DocumentQrCode url={qrCodeUrl} />}
       </Container>
+    </div>
     </div>
   );
 };
