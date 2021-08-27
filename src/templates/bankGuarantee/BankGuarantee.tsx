@@ -38,60 +38,68 @@ export const BankGuaranteeTemplate: FunctionComponent<TemplateProps<BankGuarante
   } = document;
   const qrCodeUrl = document?.links?.self.href;
 
+  const borderStyle = {
+    borderStyle: "solid",
+    borderWidth: 1.5,
+    borderColor: "black"
+  };
+
   return (
     <div style={{ backgroundColor }} data-testid="bank-guarantee-template">
-      <Container className="p-4 mx-auto container">
-        <PrintWatermark />
+      <div style={borderStyle}>
+        <Container className="p-4 mx-auto container">
+          <PrintWatermark />
 
-        <div className="grid grid-cols-1 gap-1">
-          <div className="place-self-center">
-            <img style={{ width: "150px" }} src="/static/images/quotation_icon.png" />
-            <br />
-            <br />
-            <br />
+          <div className="grid grid-cols-1 gap-1">
+            <div className="place-self-center">
+              <img style={{ width: "150px" }} src="/static/images/quotation_icon.png" />
+              <br />
+              <br />
+              <br />
+            </div>
           </div>
-        </div>
-        <div className="grid grid-cols-1 gap-1">
-          <div className="place-self-center text-3xl">
-            Bank Guarantee
-            <br />
-            <br />
+          <div className="grid grid-cols-1 gap-1">
+            <div className="place-self-center text-3xl">
+              Bank Guarantee
+              <br />
+              <br />
+            </div>
           </div>
-        </div>
 
-        <div className="grid grid-cols-4 gap-3">
-          <div className="font-bold">Issue Date:</div>
-          <div>{issueDate}</div>
-          <div className="font-bold">Effective Date:</div>
-          <div>{effectiveDate}</div>
-          <div className="font-bold">Expiry Date:</div>
-          <div>{expiryDate}</div>
-          <div className="font-bold">Guarantee Amount:</div>
-          <div>{guaranteedAmount}</div>
-          <div className="font-bold">Vendor Name:</div>
-          <div>{vendorName}</div>
-          <div className="font-bold">Vendor Address:</div>
-          <div>{vendorAddress}</div>
-          <div className="font-bold">Vendor Ref:</div>
-          <div>{vendorRef}</div>
-          <div />
-          <div />
-          <div className="font-bold">Beneficiary Name:</div>
-          <div>{beneficiaryName}</div>
-          <div className="font-bold">Beneficiary Address:</div>
-          <div>{beneficiaryAddress}</div>
-          <div className="font-bold">Guarantor Name:</div>
-          <div>{guarantorName}</div>
-          <div className="font-bold">Guarantor Address:</div>
-          <div>{guarantorAddress}</div>
-          <div className="font-bold">Guarantor Ref:</div>
-          <div>{guarantorRef}</div>
-          <div />
-          <div />
-        </div>
+          <div className="grid grid-cols-4 gap-3">
+            <div className="font-bold">Issue Date:</div>
+            <div>{issueDate}</div>
+            <div className="font-bold">Effective Date:</div>
+            <div>{effectiveDate}</div>
+            <div className="font-bold">Expiry Date:</div>
+            <div>{expiryDate}</div>
+            <div className="font-bold">Guarantee Amount:</div>
+            <div>{guaranteedAmount}</div>
+            <div className="font-bold">Vendor Name:</div>
+            <div>{vendorName}</div>
+            <div className="font-bold">Vendor Address:</div>
+            <div>{vendorAddress}</div>
+            <div className="font-bold">Vendor Ref:</div>
+            <div>{vendorRef}</div>
+            <div />
+            <div />
+            <div className="font-bold">Beneficiary Name:</div>
+            <div>{beneficiaryName}</div>
+            <div className="font-bold">Beneficiary Address:</div>
+            <div>{beneficiaryAddress}</div>
+            <div className="font-bold">Guarantor Name:</div>
+            <div>{guarantorName}</div>
+            <div className="font-bold">Guarantor Address:</div>
+            <div>{guarantorAddress}</div>
+            <div className="font-bold">Guarantor Ref:</div>
+            <div>{guarantorRef}</div>
+            <div />
+            <div />
+          </div>
 
-        {qrCodeUrl && <DocumentQrCode url={qrCodeUrl} />}
-      </Container>
+          {qrCodeUrl && <DocumentQrCode url={qrCodeUrl} />}
+        </Container>
+      </div>
     </div>
   );
 };
