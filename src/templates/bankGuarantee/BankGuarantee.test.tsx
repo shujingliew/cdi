@@ -9,6 +9,6 @@ describe("bank guarantee", () => {
   it("should render the bank guarantee correctly", () => {
     render(<BankGuaranteeTemplate document={bankGuarantee} handleObfuscation={() => {}} />);
 
-    expect(screen.getAllByText("Seller A")).toHaveLength(1);
+    expect(screen.getAllByText("Bank Guarantee")).toHaveLength(1);
   });
 });
